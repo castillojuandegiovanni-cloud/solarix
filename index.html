@@ -1,0 +1,496 @@
+
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#071A35">
+<!-- Iconos para navegadores de escritorio estándar -->
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+
+<!-- Icono para dispositivos Apple (Safari en iOS) -->
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
+<!-- Manifiesto para dispositivos Android y pantallas de inicio -->
+<link rel="manifest" href="./site.webmanifest">
+<title>Solarix | Juan Castillo D. — Bombeo solar</title>
+<style>
+:root{--navy:#071A35;--gold:#FFC400;--green:#299B62;--bg:#F2F5F7;--ink:#17212B;--line:#DDE3E8;--muted:#627180;--red:#B42318;--blue:#EAF4FA;--energy:#0878D1;--cyan:#22C5F5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:18px}.hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 35%,rgba(8,120,209,.27),transparent 36%),linear-gradient(115deg,#041329 0%,#071A35 52%,#0B3155 100%);color:#fff;padding:22px 27px 27px;border:1px solid rgba(74,174,237,.35);border-radius:22px;margin:0 0 18px;box-shadow:0 16px 42px rgba(4,19,41,.2)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(4,19,41,.97) 0%,rgba(4,19,41,.84) 40%,rgba(4,19,41,.12) 76%,rgba(4,19,41,.38) 100%)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,#20BDF3,#FFC400,transparent);opacity:.8}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-bottom:17px;border-bottom:1px solid rgba(133,190,230,.18)}.hero-brand{display:flex;align-items:center;gap:12px;min-width:0}.hero-brand img{width:clamp(42px,5vw,56px);height:clamp(42px,5vw,56px);object-fit:contain;flex:0 0 auto;border-radius:12px}.hero-brand .brand-name{font-size:clamp(25px,3.4vw,35px);font-weight:900;letter-spacing:.045em;line-height:1;color:#fff;text-transform:uppercase}.brand-name .brand-x{color:var(--gold)}.brand-divider{height:36px;width:1px;background:rgba(164,205,235,.42);margin:0 3px 0 7px}.brand-tagline{font-size:12px;line-height:1.45;letter-spacing:.035em;color:#BCD5EB;max-width:205px}.hero-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#4DD3FF;margin:0 0 10px}.hero-content{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);align-items:center;gap:8px;padding-top:23px;min-height:240px}.hero-copy{position:relative;z-index:2;max-width:560px}.hero h1{font-size:clamp(27px,4vw,43px);line-height:1.08;letter-spacing:-.035em;margin:0;color:#fff}.hero h1 span{color:var(--gold)}.hero-copy>p{margin:13px 0 0;color:#D4E5F5;line-height:1.65;font-size:clamp(14px,1.5vw,16px);max-width:500px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:19px}.hero-actions a{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border-radius:10px;padding:12px 17px;font-weight:800;font-size:13px;min-height:44px;transition:transform .18s ease,box-shadow .18s ease}.hero-actions a:hover{transform:translateY(-2px)}.hero-actions .hero-primary{background:linear-gradient(135deg,#FFC400,#FFAD0A);color:#14243A;box-shadow:0 6px 18px rgba(255,196,0,.18)}.hero-actions .hero-secondary{color:#E7F5FF;border:1px solid rgba(128,201,246,.65);background:rgba(5,31,58,.58)}.hero-art{align-self:stretch;min-height:225px;display:flex;align-items:center;justify-content:center;position:relative}.hero-art:before{content:"";position:absolute;width:90%;height:76%;right:0;bottom:2%;background:radial-gradient(ellipse,rgba(10,149,230,.22),transparent 68%);filter:blur(8px)}.hero-art svg{position:relative;width:100%;max-width:500px;height:auto;max-height:275px;overflow:visible;filter:drop-shadow(0 12px 25px rgba(0,0,0,.22))}.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.hero-pill{border:1px solid rgba(110,182,230,.25);background:rgba(7,43,75,.65);color:#CDE6FA;border-radius:999px;padding:7px 10px;font-size:11px;display:inline-flex;align-items:center;gap:6px}.hero-pill i{width:6px;height:6px;border-radius:50%;background:#35D4FF;box-shadow:0 0 8px #35D4FF}.author{font-size:11px;color:#91B3D2;margin-top:16px;letter-spacing:.02em}
+.card{background:#fff;border:1px solid #e7ebef;border-radius:17px;padding:18px;margin-bottom:15px;box-shadow:0 3px 12px #132c3e08}
+h2{font-size:20px;margin:0 0 14px;color:var(--navy)}h3{font-size:16px;margin:20px 0 12px;color:var(--navy)}p{line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+label{display:block;font-size:13px;font-weight:700;color:#344454}input,select{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid #cfd8e0;border-radius:10px;font-size:16px;background:#fff;color:var(--ink);min-height:46px}
+small,.hint{display:block;color:var(--muted);font-size:12px;line-height:1.45;margin-top:6px}
+button{font:inherit;cursor:pointer;border:0;border-radius:11px;padding:12px 15px;font-weight:750;min-height:44px}
+.primary{background:var(--green);color:#fff}.secondary{background:#e9eef3;color:var(--navy)}.dark{background:var(--navy);color:#fff}.danger{background:#fcebea;color:var(--red)}button:disabled{opacity:.45;cursor:not-allowed}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.mode{display:grid;grid-template-columns:1fr 1fr;gap:9px}.mode button{border:1px solid var(--line);background:#f8fafb;color:var(--navy)}.mode button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.note,.warning,.error,.success{padding:13px 14px;border-radius:11px;margin-top:12px;line-height:1.5;font-size:13px}.note{background:#edf6eb;border-left:4px solid var(--green)}.warning{background:#fff7e3;border-left:4px solid var(--gold)}.error{background:#fdecec;border-left:4px solid var(--red);color:#7a1510}.success{background:#e8f5eb;border-left:4px solid #23834b}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}.metric{padding:13px;background:#f7f9fb;border:1px solid var(--line);border-radius:12px;min-width:0}.metric .k{font-size:11px;color:var(--muted);line-height:1.35}.metric .v{font-size:clamp(17px,3vw,23px);font-weight:800;color:var(--navy);margin-top:5px;overflow-wrap:anywhere}
+.hidden{display:none!important}.badge{display:inline-block;background:#e8edf2;color:#314557;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:700}.gpsbox{background:#f7fafc;border:1px dashed #9aabb8;padding:14px;border-radius:12px;margin-top:12px}.gpsstatus{font-size:13px;line-height:1.5;white-space:pre-line;margin-top:10px}.readout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}.readout div{background:white;border:1px solid var(--line);padding:10px;border-radius:10px;font-size:12px}.readout strong{display:block;font-size:17px;color:var(--navy);margin-top:4px}
+.definitions{margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden}.definitions summary{padding:13px;background:#f4f7f9;color:var(--navy);font-weight:800;cursor:pointer;list-style-position:inside}.definitions[open] summary{background:#eaf2f7}.panel-calculator{border-color:#b7d6e8;box-shadow:0 3px 12px rgba(10,35,66,.06)}.panel-calculator summary{background:#e8f4fb}.panel-calculator[open] summary{background:#dceef8}.definitions .body>p:last-child{margin-bottom:2px}.definitions .body{padding:13px;line-height:1.5;font-size:13px}.definitions dt{font-weight:800;color:var(--navy);margin-top:10px}.definitions dd{margin:3px 0 8px}.factbox{margin-top:14px;background:#edf6eb;border-left:4px solid var(--green);border-radius:11px;padding:14px;line-height:1.5}.factbox .facttitle{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#38643b}.factbox .facttext{font-size:15px;margin-top:5px}.sources{font-size:12px;line-height:1.6}.sources a{color:#175c8d;overflow-wrap:anywhere}.footer{text-align:center;color:var(--muted);font-size:12px;padding:12px 0 25px}
+@media(max-width:760px){.wrap{padding:12px}.hero{padding:17px;border-radius:17px}.hero-content{grid-template-columns:1fr;gap:0;padding-top:22px}.hero-copy{max-width:650px}.hero-art{min-height:160px;max-height:205px;margin-top:2px;opacity:.95}.hero-art svg{max-height:205px;max-width:420px}.hero-top{align-items:flex-start}.brand-tagline{display:none}.brand-divider{height:30px}.hero-pills{margin-top:13px}}
+@media(max-width:650px){.wrap{padding:10px}.hero{padding:15px}.hero-brand img{width:40px;height:40px}.hero-brand .brand-name{font-size:25px}.brand-divider{margin-left:1px}.hero-content{padding-top:19px}.hero h1{font-size:clamp(27px,8vw,36px)}.hero-art{min-height:130px;max-height:165px}.hero-art svg{max-height:165px}.hero-actions a{flex:1 1 100%;}.hero-pills{gap:6px}.hero-pill{font-size:10px}.card{padding:15px}.grid,.grid.three{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.actions button{flex:1 1 140px}.mode button{padding:11px 8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-actions a{transition:none}}
+
+@media print{body{background:#fff}.wrap{max-width:none;padding:0}.hero{background:#071A35!important;color:#fff!important;box-shadow:none;border-radius:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}.hero-art,.hero-actions,.hero-pills,.hero-top .hero-pill{display:none!important}.hero-content{display:block;min-height:0;padding-top:14px}.hero-copy{max-width:none}.hero:before{display:none}}
+
+/* SOLARIX PREMIUM LANDING + DARK ENGINEERING THEME */
+:root{--bg:#03152b;--ink:#eaf4ff;--line:#164b76;--muted:#a9c7e4;--blue:#0878d1;--energy:#00b8f4;--green:#2cc875}
+body{background:radial-gradient(ellipse at 50% -15%,#0b3962 0%,#03152b 48%,#020d1c 100%);color:#eaf4ff}
+.wrap{max-width:1500px;padding:0 26px 22px}
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:82px;padding:12px 2px 12px;border-bottom:1px solid rgba(51,164,230,.35);margin-bottom:0}
+.site-brand{display:flex;align-items:center;gap:10px;min-width:205px;text-decoration:none;color:#fff}
+.site-brand img{width:65px;height:58px;object-fit:contain}
+.site-brand strong{font-size:clamp(22px,2.4vw,32px);font-weight:900;letter-spacing:-.045em;white-space:nowrap}
+.site-brand strong span{color:#ffc400}
+.site-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.site-links a{display:inline-flex;align-items:center;gap:8px;padding:13px 14px;color:#c8def2;text-decoration:none;font-size:13px;font-weight:650;border-bottom:3px solid transparent;border-radius:8px 8px 0 0}
+.site-links a:hover,.site-links a:focus-visible{color:#31d1ff;background:#0b2d4d;border-bottom-color:#05c4ff}
+.site-location{border:1px solid #16598a;background:#08284b;color:#e7f5ff;border-radius:22px;padding:10px 15px;font-size:13px;white-space:nowrap}
+.hero{border-radius:0 0 0 0;margin:0 -26px 24px;padding:0 26px 24px;border:0;border-bottom:1px solid rgba(20,143,214,.6);box-shadow:none;background:radial-gradient(ellipse at 64% 42%,rgba(9,111,180,.3),transparent 45%),linear-gradient(110deg,#03152b 0%,#062447 55%,#03152b 100%)}
+.hero:before{background:linear-gradient(90deg,rgba(2,17,35,.98) 0%,rgba(3,24,48,.94) 28%,rgba(3,24,48,.25) 68%,rgba(3,24,48,.6) 100%)}
+.hero-top{border-bottom:0;padding:0;min-height:0}
+.hero-top .hero-brand{display:none}
+.hero-top>.hero-pill{display:none}
+.hero-content{grid-template-columns:minmax(0,.88fr) minmax(340px,1.12fr);gap:20px;padding-top:28px;min-height:330px}
+.hero-copy{max-width:560px;padding:12px 0 16px}
+.hero-kicker{font-size:12px;color:#8edcff;letter-spacing:.23em}
+.hero h1{font-size:clamp(34px,4vw,54px);line-height:1.05;letter-spacing:-.04em}
+.hero-copy>p{font-size:16px;line-height:1.6;max-width:510px}
+.hero-actions a{border-radius:8px;min-height:48px;padding:13px 20px}
+.hero-actions .hero-primary{background:linear-gradient(120deg,#0789ef,#00b7ff);color:#fff;box-shadow:0 8px 24px #0076d52a}
+.hero-actions .hero-secondary{border-color:#2e9bd6;background:#06294b;color:#eaf7ff}
+.hero-pills{display:none}
+.author{color:#86b2d7}
+.hero-art{min-height:290px}
+.hero-art svg{max-width:650px;max-height:335px}
+.home-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(260px,.95fr);gap:20px;margin:0 0 20px}
+.module-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.module-card{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;min-height:236px;padding:21px 18px 18px;border:1px solid #125185;border-radius:13px;background:linear-gradient(155deg,rgba(7,43,77,.98),rgba(3,24,47,.98));color:#eaf6ff;text-decoration:none;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.module-card:after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:7px;background:var(--module-accent,#0789ef);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.module-card:hover{transform:translateY(-3px);border-color:var(--module-accent,#00bfff);box-shadow:0 12px 30px #0003}
+.module-icon{width:62px;height:62px;border:2px solid var(--module-accent,#0789ef);color:var(--module-accent,#0789ef);border-radius:50%;display:grid;place-items:center;font-size:30px;margin-bottom:16px;background:#062849}
+.module-card h3{color:#fff;font-size:18px;margin:0 0 9px;letter-spacing:-.02em}
+.module-card p{color:#c1d8ee;font-size:13px;line-height:1.5;margin:0 0 17px;flex:1}
+.module-card .module-go{align-self:flex-end;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:var(--module-accent,#0789ef);color:#001a31;font-weight:900}
+.side-stack{display:flex;flex-direction:column;gap:16px;min-width:0}
+.home-panel{border:1px solid #125185;border-radius:13px;overflow:hidden;background:linear-gradient(145deg,#06294a,#03172e);color:#e9f5ff}
+.home-panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid #12436b;font-weight:800}
+.home-panel-body{padding:17px}
+.fact-home{display:flex;gap:13px;align-items:flex-start}
+.fact-bulb{color:#ffc400;font-size:27px;line-height:1}
+.fact-home strong{display:block;color:#fff;margin-bottom:6px}
+.fact-home p{font-size:13px;color:#c8def1;line-height:1.55;margin:0}
+.fact-controls{display:flex;align-items:center;justify-content:space-between;margin-top:14px;color:#80b6df;font-size:12px}
+.fact-controls button{min-height:30px;padding:5px 10px;background:#0b3961;border:1px solid #165b8d;color:#d7efff}
+.process-panel{margin:0 0 20px;padding:18px 20px 20px;border:1px solid #125185;border-radius:13px;background:linear-gradient(145deg,#06284a,#03172e)}
+.process-panel h2{color:#fff;margin:0 0 20px;font-size:20px}
+.process-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.process-step{position:relative;text-align:center;color:#c7dff4;padding:2px 8px}
+.process-step .step-icon{font-size:29px;color:#13b9ff;margin-bottom:7px}
+.process-step strong{display:block;color:#fff;font-size:13px;margin-bottom:5px}
+.process-step p{font-size:11px;line-height:1.45;margin:0}
+.process-step:not(:last-child):after{content:"→";position:absolute;right:-12px;top:4px;color:#5ca7dc;font-size:24px}
+.promo-panel{background:linear-gradient(120deg,rgba(4,26,48,.9),rgba(5,54,78,.75)),radial-gradient(ellipse at right top,#157c9a,transparent 65%);min-height:150px}
+.promo-panel .home-panel-body{background:radial-gradient(ellipse at 90% 0%,#17608255,transparent 60%)}
+.promo-panel h3{margin:0 0 10px;color:#fff;font-size:16px}
+.promo-panel p{margin:0;color:#c9e0f3;font-size:13px;line-height:1.5}
+.site-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:17px 4px 10px;border-top:1px solid #10416b;color:#9fc0df;font-size:12px}
+.site-footer .footer-brand{display:flex;align-items:center;gap:9px;color:#fff;font-size:16px;font-weight:850}
+.site-footer img{width:34px;height:34px;object-fit:contain}
+.card{background:linear-gradient(145deg,#082747,#041b33);border:1px solid #124b79;color:#e7f3ff;box-shadow:0 8px 24px #0002}
+h2,h3{color:#f3f8ff}
+label{color:#cce0f2}
+input,select{background:#041c35;color:#edf7ff;border-color:#1c5b87}
+input::placeholder{color:#7fa4c6}
+small,.hint{color:#a6c2dc}
+.metric{background:#062340;border-color:#16507c}
+.metric .k{color:#a8c6e0}.metric .v{color:#fff}
+.mode button{background:#062442;color:#d6eaff;border-color:#185681}
+.mode button.active{background:#0878d1;border-color:#13baff;color:#fff}
+.note{background:#082e3a;border-left-color:#36c878;color:#d9f8e7}
+.warning{background:#382d12;border-left-color:#ffc400;color:#fff0c2}
+.error{background:#421e29;border-left-color:#ff6b78;color:#ffe0e4}
+.success{background:#0b3a2a;border-left-color:#37d486;color:#d8ffeb}
+.badge{background:#103b5e;color:#d7ecff}
+.gpsbox{background:#041d36;border-color:#26618a}
+.readout div{background:#082746;border-color:#19517a}
+.definitions{border-color:#18517d}
+.definitions summary,.definitions[open] summary,.panel-calculator summary,.panel-calculator[open] summary{background:#082e52;color:#edf8ff}
+.definitions .body{color:#d1e4f5}
+.definitions dt{color:#fff}
+.factbox{background:#082e3a;border-left-color:#ffc400;color:#e7f5ff}
+.factbox .facttitle{color:#ffdc66}
+.sources a{color:#63caff}
+.footer{color:#91b7d8}
+#app{scroll-margin-top:18px}
+@media(max-width:1050px){.wrap{padding-left:18px;padding-right:18px}.hero{margin-left:-18px;margin-right:-18px;padding-left:18px;padding-right:18px}.home-grid{grid-template-columns:1fr}.side-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.module-card{min-height:215px}.site-brand{min-width:170px}.site-brand img{width:53px}.site-links a{padding:10px 8px}}
+@media(max-width:760px){.wrap{padding:0 12px 18px}.site-nav{flex-wrap:wrap;gap:9px;padding:10px 0}.site-brand{min-width:0}.site-brand img{width:46px;height:44px}.site-brand strong{font-size:23px}.site-links{order:3;width:100%;justify-content:space-between;overflow-x:auto}.site-links a{font-size:11px;padding:9px 7px;white-space:nowrap}.site-location{margin-left:auto;font-size:11px;padding:8px 10px}.hero{margin:0 -12px 16px;padding:0 15px 18px}.hero-content{grid-template-columns:1fr;min-height:0;padding-top:14px;gap:0}.hero-copy{padding:15px 0 0}.hero h1{font-size:clamp(30px,8vw,42px)}.hero-art{min-height:175px;max-height:220px;margin-top:4px}.hero-art svg{max-height:220px}.hero-copy>p{font-size:14px}.hero-actions a{flex:1 1 auto}.module-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.module-card{padding:15px 13px;min-height:210px}.module-icon{width:49px;height:49px;font-size:24px;margin-bottom:12px}.module-card h3{font-size:15px}.module-card p{font-size:12px}.side-stack{grid-template-columns:1fr}.process-flow{grid-template-columns:repeat(5,minmax(90px,1fr));overflow-x:auto;padding-bottom:8px}.process-panel{overflow:hidden;padding:16px 13px}.process-step:not(:last-child):after{right:-10px}.site-footer{flex-wrap:wrap}.hero-top{display:none}}
+@media(max-width:420px){.module-grid{grid-template-columns:1fr 1fr}.module-card{min-height:220px;padding:13px 10px}.module-card h3{font-size:14px}.module-card p{font-size:11px}.hero-actions a{flex-basis:100%}.site-brand img{width:40px}.site-brand strong{font-size:20px}}
+@media print{.site-nav,.home-grid,.process-panel,.site-footer{display:none!important}.hero{margin:0;padding:10px;background:#071a35!important}.card{background:#fff!important;color:#17212b!important}.card h2,.card h3,.metric .v{color:#071a35!important}label{color:#344454!important}input,select{background:#fff!important;color:#17212b!important}}
+
+
+/* LEGIBILIDAD Y CONFORT VISUAL: prioridad a los campos y datos de entrada */
+:root{--form-label:#f3f8ff;--form-help:#c1d6e9;--form-placeholder:#9fbad3;--field-bg:#061a30;--field-border:#32658b;--focus:#28c8ff}
+.hero-art img{position:relative;display:block;width:100%;height:100%;max-width:720px;max-height:360px;object-fit:contain;object-position:center;filter:drop-shadow(0 12px 25px rgba(0,0,0,.2));border-radius:8px;mix-blend-mode:normal}
+.hero-art{min-width:0;overflow:hidden}
+/* Formulario: mayor contraste para títulos, etiquetas, ayudas y controles */
+#app~.card label,.card label{color:var(--form-label);font-size:14px;font-weight:700;line-height:1.45}
+.card h2,.card h3{color:#f5f9ff}
+.card p,.card .hint,.card small,.card label small,.card .gpsstatus{color:var(--form-help);font-size:13px;line-height:1.55}
+.card input,.card select,.card textarea{background:var(--field-bg);color:#f5f9ff;border:1px solid var(--field-border);border-radius:10px;min-height:48px;font-size:16px;line-height:1.35;padding:12px 13px;box-shadow:inset 0 1px 2px rgba(0,0,0,.12)}
+.card input::placeholder,.card textarea::placeholder{color:var(--form-placeholder);opacity:1}
+.card input:focus,.card select:focus,.card textarea:focus{outline:3px solid rgba(40,200,255,.22);border-color:var(--focus);box-shadow:0 0 0 1px var(--focus)}
+.card input:disabled,.card select:disabled,.card textarea:disabled{background:#132b40;color:#a9bfd2;opacity:1}
+.card .grid{row-gap:18px}
+.card label{min-width:0}
+.card .note,.card .warning,.card .error,.card .success{font-size:13px;line-height:1.6;padding:13px 15px}
+.card details>summary{color:#f3f8ff!important;background:#103452;padding:13px 14px;border:1px solid #2a5b7e;border-radius:9px;line-height:1.45}
+.card details[open]>summary{background:#16466b;border-color:#3b82ac}
+.card details>div{color:#d9e9f7}
+.card .definitions summary,.card .definitions[open] summary,.card .panel-calculator summary,.card .panel-calculator[open] summary{color:#f3f8ff;background:#103452}
+.card .metric{background:#082743;border-color:#24577c}
+.card .metric .k{color:#bfd4e7;font-size:12px}
+.card .metric .v{color:#fff}
+.card .badge{color:#e6f4ff;background:#164466}
+.card .gpsbox{background:#082641;border-color:#3b7296}
+.card .readout div{color:#dcecf9;background:#082743;border-color:#24577c}
+.card .readout strong{color:#fff}
+.card button:focus-visible,.hero-actions a:focus-visible,.module-card:focus-visible,.site-links a:focus-visible{outline:3px solid #42d7ff;outline-offset:3px}
+/* Reduce motion and glare; keep the visual hierarchy calm */
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media(max-width:760px){.hero-art img{max-height:230px;width:100%;object-fit:contain}.card label{font-size:14px}.card label small,.card .hint,.card small{font-size:13px}}
+@media(max-width:420px){.hero-art img{max-height:195px}.card input,.card select{font-size:16px;min-height:48px}}
+
+</style>
+</head>
+<body>
+<div class="wrap" id="inicio">
+<nav class="site-nav" aria-label="Navegación principal">
+  <a class="site-brand" href="#inicio" aria-label="Solarix, inicio"><img src="solarix-marca.png" alt=""><strong>SOLAR<span>IX</span></strong></a>
+  <div class="site-links">
+    <a href="#inicio">⌂ Inicio</a>
+    <a href="#modulos">▦ Módulos</a>
+    <a href="#app">♧ Dimensionamiento</a>
+    <a href="#guiaSolarix">ⓘ Ayuda</a>
+  </div>
+  <span class="site-location">⌖ Córdoba · Ej. Montería</span>
+</nav>
+
+<header class="hero" aria-label="Presentación de Solarix">
+  <div class="hero-top">
+    <div class="hero-brand"><img src="solarix-marca.png" alt="Logo de Solarix"><span class="brand-name">SOLAR<span class="brand-x">IX</span></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-tagline">Ingeniería solar<br>Dimensionamiento · Bombeo</span></div>
+    <span class="hero-pill"><i></i> HERRAMIENTA WEB DE INGENIERÍA</span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-copy">
+      <div class="hero-kicker">Energía solar · Agua · Soluciones reales</div>
+      <h1>La energía solar,<br><span>calculada con criterio.</span></h1>
+      <p>Dimensiona sistemas solares de bombeo, llenado de tanques y riego con una guía clara, criterios técnicos y estimaciones preliminares para tu proyecto.</p>
+      <div class="hero-actions"><a class="hero-primary" href="#app">▦ &nbsp; Iniciar dimensionamiento <span aria-hidden="true">→</span></a><a class="hero-secondary" href="#guiaSolarix">⌘ &nbsp; Conocer los criterios</a></div>
+      <div class="hero-pills"><span class="hero-pill"><i></i> Bombeo solar</span><span class="hero-pill"><i style="background:#45D17A;box-shadow:0 0 8px #45D17A"></i> Riego y almacenamiento</span><span class="hero-pill"><i style="background:#FFC400;box-shadow:0 0 8px #FFC400"></i> Criterio de ingeniería</span></div>
+      <div class="author">Desarrollado por Juan Castillo D. · Herramienta de dimensionamiento preliminar</div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="solarix-bombeo-ilustracion.jpg" alt="Ilustración de un sistema de bombeo solar: panel fotovoltaico, variador, bomba sumergible, tuberías, tanque y riego agrícola" loading="eager" decoding="async">
+    </div>
+  </div>
+</header>
+
+<section class="home-grid" id="modulos" aria-label="Módulos de Solarix">
+  <div class="module-grid">
+    <a class="module-card" href="#app" style="--module-accent:#0789ef" onclick="solarixOpenModule('tanque')">
+      <span class="module-icon">◉</span><h3>Bombeo solar</h3><p>Dimensiona un sistema de bombeo según caudal, altura y condiciones de operación.</p><span class="module-go">›</span>
+    </a>
+    <a class="module-card" href="#app" style="--module-accent:#10b9ee" onclick="solarixOpenModule('tanque')">
+      <span class="module-icon">▤</span><h3>Llenado de tanque</h3><p>Estima el caudal requerido para llenar tu tanque en el tiempo deseado.</p><span class="module-go">›</span>
+    </a>
+    <a class="module-card" href="#app" style="--module-accent:#43d17a" onclick="solarixOpenModule('riego')">
+      <span class="module-icon">♧</span><h3>Riego por sectores</h3><p>Considera aspersores activos, caudal, presión y demanda hídrica.</p><span class="module-go">›</span>
+    </a>
+    <a class="module-card" href="#bombaHP" style="--module-accent:#ffc400" onclick="solarixGoPanels()">
+      <span class="module-icon">▧</span><h3>Cálculo de paneles</h3><p>Calcula una cantidad preliminar de paneles para el bombeo solar.</p><span class="module-go">›</span>
+    </a>
+  </div>
+  <aside class="side-stack">
+    <section class="home-panel">
+      <div class="home-panel-head"><span><span style="color:#ffc400;font-size:21px">♧</span> &nbsp; Datos curiosos</span><span id="factCounter">01 / 05</span></div>
+      <div class="home-panel-body">
+        <div class="fact-home"><span class="fact-bulb">☼</span><div><strong>¿Sabías que…?</strong><p id="factHomeText">Una bomba no crea agua: transfiere energía al fluido para moverlo y superar elevación, presión y pérdidas.</p></div></div>
+        <div class="fact-controls"><span>Conocimiento en cada cálculo</span><button type="button" onclick="solarixNextFact()">↻ Otro dato</button></div>
+      </div>
+    </section>
+    <section class="home-panel promo-panel">
+      <div class="home-panel-body"><h3>Soluciones solares para un futuro sostenible</h3><p>Convierte la energía del sol en soluciones prácticas para llevar agua donde tu proyecto la necesita.</p><div style="margin-top:14px;color:#ffc400;font-size:20px">☀ &nbsp; 💧 &nbsp; ↗</div></div>
+    </section>
+  </aside>
+</section>
+
+<section class="process-panel" aria-label="Cómo funciona el bombeo solar">
+  <h2>¿Cómo funciona?</h2>
+  <div class="process-flow">
+    <div class="process-step"><div class="step-icon" style="color:#ffc400">☼</div><strong>Sol</strong><p>La radiación solar genera electricidad.</p></div>
+    <div class="process-step"><div class="step-icon">▧</div><strong>Paneles</strong><p>Capturan la energía del sol.</p></div>
+    <div class="process-step"><div class="step-icon">▣</div><strong>Controlador</strong><p>Gestiona la energía para el sistema.</p></div>
+    <div class="process-step"><div class="step-icon">◉</div><strong>Bomba</strong><p>Convierte la energía en presión y caudal.</p></div>
+    <div class="process-step"><div class="step-icon">♧</div><strong>Agua</strong><p>Llega al tanque o sistema de riego.</p></div>
+  </div>
+</section>
+
+<section class="card" id="app">
+<h2>1. Ubicación y recurso solar</h2>
+<div class="grid">
+<label>Departamento<select id="departamento">
+<option>Amazonas</option><option>Antioquia</option><option>Atlántico</option><option>Bogotá D.C.</option><option>Bolívar</option><option>Boyacá</option><option>Caldas</option><option>Caquetá</option><option>Cauca</option><option>Cesar</option><option selected>Córdoba</option><option>Cundinamarca</option><option>Chocó</option><option>Huila</option><option>La Guajira</option><option>Magdalena</option><option>Meta</option><option>Nariño</option><option>Norte de Santander</option><option>Quindío</option><option>Risaralda</option><option>Santander</option><option>Sucre</option><option>Tolima</option><option>Valle del Cauca</option><option>Arauca</option><option>Casanare</option><option>Putumayo</option><option>San Andrés</option><option>Guainía</option><option>Guaviare</option><option>Vaupés</option><option>Vichada</option>
+</select></label>
+<label>Ciudad / municipio<input id="ciudad" placeholder="Ej. Montería"></label>
+</div>
+<div class="metrics" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div class="metric"><div class="k">HSP de referencia</div><div class="v" id="hspMostrar">3,75 HSP</div></div><div class="metric"><div class="k">Eficiencia global estimada de la bomba</div><div class="v">55 %</div></div></div>
+<div class="note">Las HSP son valores departamentales de referencia. No sustituyen la evaluación del recurso solar en el sitio exacto.</div>
+</section>
+
+<section class="card">
+<h2>2. Tipo de proyecto</h2>
+<div class="mode"><button id="btnTanque" class="active" type="button" onclick="setTipo('tanque')">Llenado de tanque</button><button id="btnRiego" type="button" onclick="setTipo('riego')">Riego agrícola</button></div>
+</section>
+
+<section class="card">
+<h2>3. Datos del pozo</h2>
+<div class="grid three">
+<label>Profundidad total del pozo (m)<input id="profundidadPozo" type="number" min="0" step="0.1" placeholder="Ej. 80"><small>Mide desde el suelo hasta el fondo. Se utiliza en el método rápido.</small></label>
+<label>¿A qué profundidad se encuentra el agua? (m)<input id="profundidadBombeo" type="number" min="0" step="0.1" placeholder="Ej. 25"><small>Mide desde el nivel del suelo hasta la superficie del agua. Si el agua baja cuando bombeas, usa la profundidad del agua mientras está bombeando para un cálculo más realista.</small></label>
+<label>Diámetro interior del pozo (pulgadas, opcional)<input id="diametroPozo" type="number" min="0" step="0.1" placeholder="Ej. 6"></label>
+</div>
+<details style="margin-top:12px"><summary style="cursor:pointer;font-weight:800;color:var(--navy)">Dato opcional para estimar el volumen almacenado</summary><div class="grid" style="margin-top:12px"><label>Profundidad del agua en reposo desde superficie (m)<input id="espejoAgua" type="number" min="0" step="0.1" placeholder="Ej. 20"><small>Se usa solo para estimar el volumen geométrico; no se usa para calcular la altura de bombeo.</small></label></div><div class="gpsbox"><strong>Volumen geométrico estimado en el pozo</strong><div id="volumenPozo" class="gpsstatus">Para calcular el volumen, completa profundidad total, nivel de agua en reposo y diámetro interior.</div><small>El volumen almacenado no significa que toda el agua sea extraíble. La recuperación y el abatimiento del pozo deben verificarse.</small></div></details>
+<div class="note">Importante: el nivel dinámico es la profundidad del agua mientras se bombea. Si baja durante la operación, la altura requerida aumenta y el caudal de la bomba puede disminuir. Lo ideal es obtener este dato mediante una prueba de bombeo al caudal previsto.</div>
+</section>
+
+<section class="card">
+<h2>4. Distancia entre el pozo y el tanque</h2>
+<p class="hint">Indica la distancia aproximada que recorrerá la tubería y si el tanque está más alto o más bajo que el pozo. Puedes escribir la distancia o medir el trayecto con el GPS del celular.</p>
+<div class="mode"><button id="btnManual" class="active" type="button" onclick="setModo('manual')">Ingresar manualmente</button><button id="btnTrayecto" type="button" onclick="setModo('gps')">Medir por trayecto GPS</button></div>
+<div id="manualBox" style="margin-top:14px">
+<div class="grid">
+<label>Distancia entre el pozo y el tanque (m)<input id="distanciaManual" type="number" min="0" step="0.1" placeholder="Ej. 85"></label>
+<label>Desnivel entre el suelo del pozo y la base del tanque (m)<input id="desnivelManual" type="number" step="0.1" value="0" placeholder="Ej. 12"><small>Escribe 0 si están al mismo nivel. Usa un número positivo si el tanque está más alto y negativo si está más bajo.</small></label>
+</div>
+<div class="note">La distancia debe aproximarse al recorrido real de la tubería, incluyendo sus rodeos. La diferencia de altura es vertical, no la distancia inclinada.</div>
+</div>
+<div id="gpsBox" class="hidden" style="margin-top:14px">
+<div class="warning">Permite el acceso a ubicación cuando el navegador lo solicite. La medición requiere GPS activo y normalmente HTTPS o localhost. La altitud del teléfono puede ser imprecisa; confirma el desnivel antes de diseñar.</div>
+<div class="actions"><button class="primary" id="startGps" type="button" onclick="startMeasure()">Registrar punto A e iniciar</button><button class="dark" id="finishGps" type="button" onclick="finishMeasure()" disabled>Finalizar en punto B</button><button class="secondary" type="button" onclick="resetMeasure()">Reiniciar</button></div>
+<div id="gpsStatus" class="gpsstatus" aria-live="polite">Listo para registrar el punto A.</div>
+<div class="readout"><div>Distancia recorrida<strong id="gpsDistance">— m</strong></div><div>Puntos GPS<strong id="gpsPoints">0</strong></div><div>Altitud A<strong id="altA">No disponible</strong></div><div>Altitud B<strong id="altB">No disponible</strong></div></div>
+<div class="grid" style="margin-top:12px">
+<label>Distancia a utilizar en cálculo (m)<input id="distanciaGpsFinal" type="number" min="0" step="0.1" placeholder="Se completa al finalizar"></label>
+<label>Desnivel corregido B − A (m)<input id="desnivelGpsFinal" type="number" step="0.1" placeholder="Completar o corregir"><small>Se llena si el dispositivo entrega altitud en ambos puntos.</small></label>
+</div>
+<button class="secondary" type="button" onclick="useGpsValues()">Usar valores de trayecto</button>
+<div class="hint">La distancia GPS suma segmentos registrados durante el recorrido; puede diferir de la longitud de la tubería. Si no hay altitud GPS disponible, ingresa el desnivel manualmente.</div>
+</div>
+</section>
+
+<section class="card" id="tanqueBox">
+<h2>5. Datos de llenado de tanque</h2>
+<div class="grid">
+<label>Capacidad del tanque (litros)<input id="capacidadTanque" type="number" min="0" step="1" placeholder="Ej. 5000"></label>
+<label>Tiempo deseado de llenado (horas)<input id="tiempoLlenado" type="number" min="0" step="0.1" placeholder="Ej. 4"></label>
+<label>Altura desde el suelo hasta la entrada de agua del tanque (m)<input id="alturaTanque" type="number" min="0" step="0.1" value="0" placeholder="Ej. 2"><small>Mide desde el suelo donde se apoya el tanque hasta el punto por donde entrará el agua.</small></label>
+</div>
+</section>
+
+<section class="card hidden" id="riegoBox">
+<h2>5. Datos básicos de riego</h2>
+<div class="grid">
+<label>Área a regar (hectáreas)<input id="areaRiego" type="number" min="0" step="0.1" placeholder="Ej. 1.5"></label>
+<label>Cultivo (opcional)<input id="cultivo" placeholder="Ej. Maíz, papa, pasto"><small>Ayuda a identificar el proyecto; no cambia automáticamente la demanda hídrica.</small></label>
+<label>Altura del aspersor sobre el suelo en el punto de entrega (m)<input id="alturaRiego" type="number" min="0" step="0.1" value="0"><small>Indica la altura vertical desde el suelo del punto de llegada hasta la boquilla del aspersor. El desnivel entre el pozo y ese suelo se ingresa en “Desnivel entre el suelo del pozo y el punto de entrega”. No es la altura del chorro.</small></label>
+<label>Demanda hídrica orientativa (mm/día)<input id="demandaRiego" type="number" min="0" step="0.5" value="5"><small>Valor inicial orientativo. Ajustar según cultivo, clima y método de riego.</small></label>
+<label>Total de aspersores instalados<input id="aspersoresTotal" type="number" min="1" step="1" placeholder="Ej. 24"><small>Cantidad total de aspersores instalados en el terreno.</small></label>
+<label>Aspersores activos por sector<input id="aspersoresSector" type="number" min="1" step="1" value="1"><small>Indica cuántos aspersores iguales funcionarán al mismo tiempo en cada turno.</small></label>
+<label>Caudal de un aspersor (L/min)<input id="caudalAspersor" type="number" min="0" step="0.1" placeholder="Ej. 8"><small>Usa el caudal de ficha técnica correspondiente a la presión seleccionada.</small></label>
+<label>Presión de trabajo por aspersor (PSI)<input id="presionAspersor" type="number" min="0" step="0.5" placeholder="Ej. 40"><small>Consulta la ficha técnica. Ingresa la presión que debe llegar a la entrada del aspersor; no la presión de salida de la bomba. 1 PSI ≈ 0,703 m.c.a.</small></label>
+<label>Horas disponibles para regar al día<input id="horasRiegoDia" type="number" min="0.1" step="0.5" value="8"><small>Se usa para comprobar si el caudal por sector permite cubrir la demanda diaria.</small></label>
+<label>Fabricante del aspersor (opcional)<input id="fabricanteAspersor" placeholder="Ej. Rain Bird, Hunter, Nelson"></label>
+<label>Modelo / referencia (opcional)<input id="modeloAspersor" placeholder="Ej. modelo o código del fabricante"></label>
+</div>
+<div class="actions"><button type="button" class="secondary" onclick="buscarAspersor()">Buscar ficha técnica del aspersor</button></div>
+<div class="sources">Referencias para consultar especificaciones oficiales: <a href="https://www.rainbird.com/" target="_blank" rel="noopener">Rain Bird</a> · <a href="https://www.hunterindustries.com/" target="_blank" rel="noopener">Hunter Industries</a> · <a href="https://nelsonirrigation.com/" target="_blank" rel="noopener">Nelson Irrigation</a>. Confirma siempre caudal y presión del mismo modelo y boquilla.</div>
+<div id="validacionRiego" class="note">Introduce el caudal y la presión de trabajo del aspersor según la ficha técnica. Si no tienes la ficha, consulta al fabricante antes de usar el cálculo para seleccionar la bomba.</div>
+<div class="warning">El cálculo se hará por sector: cantidad de aspersores activos × caudal unitario. La presión del aspersor se convertirá a MCA y se sumará a la elevación y las pérdidas. El resultado es preliminar; no garantiza por sí solo una uniformidad de riego del 100 %.</div>
+</section>
+
+<section class="card">
+<h2>6. Parámetros hidráulicos</h2>
+<label>Método para estimar la altura requerida<select id="metodoCalculo"><option value="rapido" selected>Cálculo rápido conservador (regla práctica)</option><option value="hidraulico">Hidráulico recomendado (nivel del agua + pérdidas calculadas)</option></select><small>El método rápido conserva la fórmula práctica: profundidad total del pozo + desnivel vertical + altura de descarga + distancia horizontal/10 + 10 m de margen. El método hidráulico calcula la altura estática, incorpora la presión requerida en el aspersor cuando el proyecto es de riego y calcula las pérdidas de tubería con Darcy-Weisbach; exige datos fiables y debe verificarse con la curva Q-H de la bomba.</small></label>
+<div class="grid three" style="margin-top:13px">
+<label>Tamaño de la tubería<select id="diametroTuberia">
+<option value="15">1/2 pulgada (≈ 15 mm interiores)</option>
+<option value="20">3/4 pulgada (≈ 20 mm interiores)</option>
+<option value="25">1 pulgada (≈ 25 mm interiores)</option>
+<option value="32">1 1/4 pulgadas (≈ 32 mm interiores)</option>
+<option value="40">1 1/2 pulgadas (≈ 40 mm interiores)</option>
+<option value="50" selected>2 pulgadas (≈ 50 mm interiores)</option>
+<option value="63">2 1/2 pulgadas (≈ 63 mm interiores)</option>
+<option value="75">3 pulgadas (≈ 75 mm interiores)</option>
+<option value="100">4 pulgadas (≈ 100 mm interiores)</option>
+<option value="125">5 pulgadas (≈ 125 mm interiores)</option>
+<option value="150">6 pulgadas (≈ 150 mm interiores)</option>
+</select><small>Diámetro interior aproximado para el cálculo. El valor real puede variar según la referencia y el espesor de la tubería PVC.</small></label>
+<label>Coeficiente total de pérdidas de accesorios (ΣK)<input id="coefAccesorios" type="number" min="0" step="0.1" value="0"><small>Solo para el método hidráulico. Suma los coeficientes K de codos, válvulas, tees, filtros, entrada/salida y otros accesorios según sus fichas técnicas. Si no conoces el valor, deja 0 y el resultado advertirá que faltan estas pérdidas.</small></label>
+
+</div>
+
+<div class="actions"><button class="primary" type="button" onclick="calcularBombeo()">Calcular dimensionamiento</button><button class="secondary" type="button" onclick="window.print()">Imprimir / Guardar PDF</button><button class="secondary" type="button" onclick="copiarResumen()">Copiar resumen técnico</button></div>
+<div class="note" id="datoCuriosoBox" style="margin-top:12px;border-left:4px solid var(--sun,#f4b400);padding:14px 16px"><strong>Dato curioso sobre bombeo solar</strong><p id="datoCurioso" style="margin:6px 0 0">La bomba no crea agua: transfiere energía al fluido para moverlo y superar elevación, presión y pérdidas.</p></div>
+<div id="resultadoBombeo" aria-live="polite"></div>
+<section class="card" id="guiaResultados" style="margin-top:15px">
+<h2 id="guiaSolarix">Guía de resultados</h2>
+<p class="hint">El cálculo de paneles está visible al entrar. Los criterios, las definiciones y el detalle técnico se pueden desplegar cuando los necesites.</p>
+<details class="definitions panel-calculator" open><summary>Cálculo de paneles para bombeo solar</summary><div class="body"><p>Estimación independiente basada en la potencia nominal de la bomba, la potencia de cada panel y el factor de seguridad seleccionado.</p>
+<div class="grid"><label>Potencia nominal de la bomba (HP)<input id="bombaHP" type="number" min="0.1" step="0.1" placeholder="Ej. 2"></label><label>Potencia de cada panel (Wp)<input id="potenciaPanel" type="number" min="1" step="1" placeholder="Ej. 550"></label><label>Factor de seguridad<select id="factorSolar"><option value="1.3">1,30 · margen bajo</option><option value="1.4" selected>1,40 · referencia</option><option value="1.5">1,50 · margen alto</option></select></label><label>Modelo / referencia de variador INVT (opcional)<input id="modeloINVT" placeholder="Ingresa el modelo disponible"></label></div>
+<div class="actions"><button type="button" class="primary" onclick="calcularPanelesBombeo()">Calcular cantidad de paneles</button></div><div id="resultadoPaneles" aria-live="polite" class="note">Ingresa la potencia nominal de la bomba en HP y la potencia del panel para estimar la cantidad.</div>
+<p><strong>Fórmula:</strong> cantidad = redondear hacia arriba [(HP × 746 W/HP × factor de seguridad) ÷ Wp del panel].</p>
+<div class="warning"><strong>Validación eléctrica:</strong> la cantidad por potencia no confirma compatibilidad de tensión. Verifica Voc, Vmp, rango MPPT, tensión de arranque, corriente máxima y potencia FV admisible del variador INVT específico, además de la tensión y corriente del motor.</div>
+<div class="sources">Referencias: <a href="https://www.invt.com/" target="_blank" rel="noopener">INVT</a> · <a href="https://pearlwatersystems.com/products/cat/53" target="_blank" rel="noopener">Pearl Water Systems</a>.</div></div></details>
+<details class="definitions"><summary>Ver criterios y advertencias de cada resultado</summary><div class="body" id="guiaCriteriosContent"><p>Los resultados son estimaciones preliminares. El criterio depende del método seleccionado: el método rápido aplica una regla práctica conservadora y el método hidráulico estima pérdidas de carga según los datos ingresados. Verifica siempre el nivel dinámico, la curva Q-H del fabricante y las condiciones reales de instalación.</p></div></details>
+<details class="definitions"><summary>Definición de cada resultado</summary><div class="body" id="guiaDefinicionesContent">
+<details class="definitions"><summary>Llenado de tanque</summary><div class="body"><dl><dt>Caudal requerido (L/min y GPM)</dt><dd>Volumen que la bomba debe entregar para llenar el tanque en el tiempo indicado. L/min = litros del tanque ÷ minutos disponibles. GPM usa galones estadounidenses.</dd><dt>MCA / altura dinámica total</dt><dd>Altura equivalente que debe vencer la bomba, considerando nivel de agua, desnivel, altura de descarga y pérdidas de tubería.</dd><dt>Potencia estimada</dt><dd>Estimación preliminar a partir del caudal, la altura y una eficiencia supuesta. No reemplaza la curva ni la potencia nominal del fabricante.</dd></dl></div></details>
+<details class="definitions"><summary>Riego por sectores</summary><div class="body"><dl><dt>Caudal por sector</dt><dd>Número de aspersores activos simultáneamente multiplicado por el caudal unitario de la ficha técnica.</dd><dt>Presión de trabajo (PSI)</dt><dd>Presión requerida en la entrada del aspersor según el fabricante. Conversión aproximada: MCA = PSI × 0,70307.</dd><dt>Área y demanda diaria</dt><dd>Volumen diario orientativo calculado a partir del área en hectáreas y la demanda de agua en mm/día. Debe ajustarse a las condiciones agronómicas reales.</dd><dt>Sectores y tiempo de riego</dt><dd>Estimaciones basadas en aspersores instalados, aspersores activos por sector y caudal de trabajo.</dd><dt>Uniformidad</dt><dd>También depende del espaciamiento, traslape, viento, filtración, boquillas y pérdidas reales.</dd></dl></div></details>
+
+</div></details>
+<details class="definitions"><summary>Ver detalle técnico completo</summary><div class="body" id="guiaDetalleContent"><p>Realiza un cálculo para consultar aquí el resumen técnico completo.</p></div></details>
+</section>
+</section>
+<footer class="footer">Solarix · Juan Castillo D.<br>Estimaciones preliminares sujetas a validación hidráulica, agronómica y de ingeniería.</footer>
+</div>
+<script>
+const HSP={"Amazonas":3.71,"Antioquia":3.75,"Atlántico":4.31,"Bogotá D.C.":3.92,"Bolívar":4.51,"Boyacá":3.93,"Caldas":3.88,"Caquetá":3.82,"Cauca":3.95,"Cesar":4.92,"Córdoba":4.02,"Cundinamarca":3.95,"Chocó":3.51,"Huila":4.14,"La Guajira":4.54,"Magdalena":4.75,"Meta":3.80,"Nariño":3.46,"Norte de Santander":4.16,"Quindío":3.84,"Risaralda":4.04,"Santander":4.22,"Sucre":4.13,"Tolima":4.19,"Valle del Cauca":4.33,"Arauca":4.08,"Casanare":4.28,"Putumayo":3.66,"San Andrés":4.57,"Guainía":3.98,"Guaviare":3.90,"Vaupés":3.74,"Vichada":3.98};
+const $=id=>document.getElementById(id);
+const DATOS_CURIOSOS=["La evidencia arqueológica muestra que los seres humanos han desarrollado dispositivos para elevar agua durante milenios; no existe una única persona que haya inventado el bombeo.","El tornillo de Arquímedes se asocia tradicionalmente con Arquímedes de Siracusa, en el siglo III a. C.; investigaciones modernas discuten posibles antecedentes mesopotámicos anteriores.","El tornillo de Arquímedes puede elevar agua mediante una espiral giratoria y todavía se utiliza en aplicaciones de bombeo y transporte de fluidos.","En la antigua Alejandría, Ctesibio y otros ingenieros helenísticos desarrollaron dispositivos neumáticos e hidráulicos, incluidas bombas de pistón.","Los romanos emplearon diversas tecnologías para abastecer ciudades, drenar zonas y mover agua; no dependían de un único tipo de bomba.","El shaduf o cigüeñal de contrapeso es un dispositivo antiguo para levantar agua con menos esfuerzo que al hacerlo directamente a mano.","Las norias aprovechan el movimiento del agua o de animales para elevar agua a canales de riego.","Una bomba no crea agua: transfiere energía al fluido para moverlo y superar elevación, presión y pérdidas.","La altura dinámica total se conoce también como ADT, CDT o TDH, según la región y el fabricante.","Para seleccionar una bomba se necesitan, como mínimo, el caudal requerido y la altura dinámica total de operación.","La altura máxima indicada en una ficha técnica suele corresponder a caudal cercano a cero; no significa que la bomba entregue su caudal nominal a esa altura.","La curva Q-H del fabricante muestra cómo cambia la altura que puede entregar una bomba a medida que cambia el caudal.","Dos bombas de igual potencia eléctrica pueden entregar caudales diferentes si sus diseños hidráulicos y curvas son distintos.","Una tubería más larga suele producir más pérdida por fricción si se mantienen el caudal, el diámetro y las demás condiciones.","Aumentar el diámetro interior de la tubería puede reducir considerablemente las pérdidas por fricción, aunque aumenta el costo del material.","Las pérdidas hidráulicas dependen del caudal, el diámetro interior, la longitud, la rugosidad y los accesorios.","Codos, válvulas, tees, filtros y válvulas de retención añaden pérdidas de carga al sistema.","La velocidad del agua dentro de una tubería aumenta cuando crece el caudal si el diámetro permanece igual.","El caudal es volumen por unidad de tiempo; no es lo mismo que presión ni que altura de bombeo.","Un litro por minuto equivale a 60 litros por hora.","Un metro cúbico equivale exactamente a 1.000 litros.","Un galón líquido estadounidense equivale exactamente a 3,785411784 litros; no es igual al galón imperial británico.","Solarix expresa GPM como galones estadounidenses por minuto para evitar confundirlo con el galón imperial.","Para convertir L/min a GPM estadounidenses, se divide el caudal en L/min entre 3,785411784.","MCA significa metros de columna de agua: expresa una altura equivalente asociada a la presión.","Aproximadamente, 10,2 metros de columna de agua equivalen a 1 bar de presión en condiciones habituales de agua.","Un MCA no es lo mismo que la altura dinámica total; MCA es una unidad y la ADT es el requerimiento del sistema expresado en altura.","El nivel estático es el nivel del agua cuando el pozo está en reposo y se ha estabilizado.","El nivel dinámico es la profundidad del agua mientras la bomba está extrayendo agua.","El abatimiento es la diferencia entre el nivel estático y el nivel dinámico durante el bombeo.","Si el nivel dinámico desciende, la bomba debe vencer una altura mayor desde el agua hasta la descarga.","El nivel dinámico puede variar con el caudal extraído, el tiempo de bombeo, la estación y las condiciones del acuífero.","Una prueba de bombeo ayuda a estimar el comportamiento del pozo y su capacidad sostenible de suministro.","Una bomba sobredimensionada puede extraer agua más rápido de lo que el pozo se recupera.","La protección contra trabajo en seco ayuda a evitar daños cuando el nivel de agua es insuficiente.","Un flotador puede detener la bomba cuando el tanque alcanza el nivel máximo y ayudar a evitar reboses.","Un sensor de nivel mínimo puede proteger el pozo o la bomba frente a niveles de agua demasiado bajos.","El almacenamiento de agua en un tanque puede actuar como reserva para periodos con poca radiación solar.","En muchos sistemas solares de bombeo, almacenar agua puede ser más económico que almacenar la misma energía en baterías.","Un sistema fotovoltaico de bombeo normalmente combina paneles, controlador o variador, motor-bomba y almacenamiento o distribución de agua.","La potencia eléctrica de los paneles no es igual a la potencia hidráulica entregada al agua: hay pérdidas en el sistema.","La radiación solar cambia durante el día; por eso el caudal de una bomba solar directa puede variar con la irradiancia.","Las Horas Sol Pico (HSP) representan la energía solar diaria expresada como horas equivalentes a una irradiancia de 1.000 W/m².","Las HSP de un departamento son una referencia regional; el diseño final debería usar información del sitio y considerar temporadas.","La orientación, inclinación, sombras, temperatura y suciedad afectan la producción de un arreglo fotovoltaico.","La sombra parcial sobre algunos módulos puede reducir la producción del arreglo más de lo que su área sombreada sugeriría.","Un controlador de bombeo solar puede adaptar el funcionamiento de la bomba a la energía disponible de los paneles.","El seguimiento del punto de máxima potencia (MPPT) busca que el arreglo fotovoltaico opere cerca de su punto de máxima potencia disponible.","Los motores de corriente alterna pueden operar con bombeo solar cuando el sistema incorpora un inversor o controlador compatible.","No todas las bombas sumergibles son aptas para conectarse directamente a paneles; deben respetarse motor, controlador, voltaje y corriente.","La bomba sumergible empuja el agua desde dentro del pozo; una bomba de superficie necesita condiciones de succión adecuadas.","Las bombas de superficie tienen límites de succión asociados a la presión atmosférica, la altitud, la temperatura y las pérdidas.","Una bomba centrífuga suele requerir cebado cuando no es autocebante y la línea de succión contiene aire.","La cavitación puede dañar componentes de una bomba y está relacionada con condiciones de presión insuficiente en la succión.","El agua con arena o sedimentos puede desgastar impulsores y sellos si la bomba no está diseñada para esas condiciones.","La calidad del agua y el diámetro del pozo influyen en la elección de la bomba y en su instalación.","El diámetro exterior de una tubería no siempre coincide con su diámetro interior; el espesor de pared cambia el área de paso.","La presión necesaria para un sistema de riego por aspersión puede ser mucho mayor que la necesaria para descargar a un tanque abierto.","Un tanque abierto normalmente no requiere sumar presión de servicio en su superficie, pero sí se debe considerar su elevación y las pérdidas.","Si el agua se entrega a una red presurizada, la presión requerida en destino debe convertirse a metros de columna de agua y sumarse a la ADT.","La potencia hidráulica depende del caudal y de la altura; duplicar cualquiera de ellos duplica la potencia hidráulica ideal requerida.","La potencia eléctrica requerida suele ser mayor que la hidráulica por las pérdidas del motor, la bomba y el controlador.","El rendimiento real del conjunto bomba-motor cambia con el punto de operación; un porcentaje global fijo solo sirve para estimaciones iniciales.","El punto de mejor eficiencia de una bomba se conoce como BEP, por sus siglas en inglés.","Operar muy lejos del punto de mejor eficiencia puede aumentar vibraciones, desgaste y consumo energético.","La válvula de retención ayuda a impedir que el agua regrese por la tubería cuando la bomba se detiene.","El diámetro de descarga y la longitud de la tubería deben verificarse con el caudal de diseño, no solo con el diámetro de la salida de la bomba.","El agua almacenada en un pozo no equivale necesariamente al volumen que el pozo puede producir de forma sostenible.","El volumen geométrico de un pozo cilíndrico se estima con el área de la sección transversal multiplicada por la altura de la columna de agua.","La capacidad de recuperación del acuífero puede ser más importante que el volumen de agua que cabe dentro del hueco del pozo.","La bomba debe elegirse para el caudal que el pozo puede sostener y el sistema necesita, no para extraer el máximo posible sin control.","Los sistemas solares de bombeo fotovoltaico se estudiaban y reportaban ya en la década de 1960; una revisión académica cita un caso en la Unión Soviética en 1964.","Una revisión académica de 2016 describe más de 50 años de desarrollo de sistemas fotovoltaicos para bombeo de agua.","Los paneles fotovoltaicos convierten la luz solar en electricidad mediante el efecto fotovoltaico.","El efecto fotovoltaico fue observado por Edmond Becquerel en 1839, mucho antes de que existieran los paneles comerciales modernos.","La primera célula solar de silicio práctica desarrollada en Bell Labs fue presentada en 1954.","La tecnología fotovoltaica se usa para bombeo de agua potable, abrevaderos, riego y suministro en lugares aislados.","La energía solar reduce la dependencia de combustible o de la red, pero el desempeño económico depende del recurso solar, la bomba y el diseño.","El mantenimiento preventivo incluye revisar filtros, válvulas, conexiones eléctricas, soportes y el estado de los paneles.","Mantener limpios los paneles ayuda a reducir pérdidas de producción por suciedad acumulada.","El cableado largo puede producir caída de tensión; su sección debe calcularse según corriente, longitud y tensión del sistema.","Una protección eléctrica adecuada y una puesta a tierra bien diseñada son parte esencial de una instalación segura.","La instalación definitiva debe respetar las especificaciones del fabricante y la normativa eléctrica aplicable en el lugar del proyecto.","Un caudal medido en campo con un recipiente calibrado y cronómetro puede servir para contrastar una estimación de caudal.","Para medir caudal, se puede registrar el volumen recogido y dividirlo entre el tiempo de llenado, usando unidades coherentes.","La selección final debe comprobar el punto de operación en la curva real de la bomba y no basarse solo en potencia nominal.","Una estimación rápida es útil para orientar una conversación, pero no sustituye un cálculo hidráulico con datos de campo.","La precisión del cálculo depende tanto de la calidad de los datos de entrada como de la fórmula utilizada."];
+let ultimoDato=-1;
+
+const num=id=>{const v=parseFloat($(id).value);return Number.isFinite(v)?v:0};
+const fmt=(x,d=2)=>Number(x).toLocaleString("es-CO",{minimumFractionDigits:d,maximumFractionDigits:d});
+let tipo="tanque",modo="manual",watchId=null,measuring=false,lastPoint=null,points=[],distanceM=0,pointA=null,pointB=null,summaryText="";
+function hsp(){return HSP[$("departamento").value]||3.75}
+function updateHsp(){$("hspMostrar").textContent=fmt(hsp())+" HSP"}
+$("departamento").addEventListener("change",updateHsp);updateHsp();
+function setTipo(t){tipo=t;$("btnTanque").classList.toggle("active",t==="tanque");$("btnRiego").classList.toggle("active",t==="riego");$("tanqueBox").classList.toggle("hidden",t!=="tanque");$("riegoBox").classList.toggle("hidden",t!=="riego");$("resultadoBombeo").innerHTML=""}
+function setModo(m){modo=m;$("btnManual").classList.toggle("active",m==="manual");$("btnTrayecto").classList.toggle("active",m==="gps");$("manualBox").classList.toggle("hidden",m!=="manual");$("gpsBox").classList.toggle("hidden",m!=="gps");$("resultadoBombeo").innerHTML=""}
+function volumeWell(){const p=num("profundidadPozo"),e=num("espejoAgua"),d=num("diametroPozo");if(!$("espejoAgua").value.trim()||p<=0||e<0||d<=0||e>=p){$("volumenPozo").textContent="Para estimar el volumen, completa datos válidos: profundidad total > nivel de agua en reposo ≥ 0 y diámetro interior > 0.";return null}const col=p-e,dm=d*.0254,m3=Math.PI*Math.pow(dm/2,2)*col,liters=m3*1000;$("volumenPozo").innerHTML="<strong>"+fmt(liters,0)+" litros</strong> · "+fmt(m3,3)+" m³<br>Columna geométrica bajo el nivel de reposo: "+fmt(col)+" m";return{liters,m3,col}}
+["profundidadPozo","espejoAgua","diametroPozo"].forEach(id=>$(id).addEventListener("input",volumeWell));
+
+function haversine(a,b){const R=6371000,rad=x=>x*Math.PI/180,dLat=rad(b.lat-a.lat),dLon=rad(b.lon-a.lon),x=Math.sin(dLat/2)**2+Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(dLon/2)**2;return 2*R*Math.asin(Math.sqrt(Math.min(1,x)))}
+function gpsError(msg){$("gpsStatus").textContent=msg}
+function startMeasure(){if(!navigator.geolocation){gpsError("Este navegador no ofrece geolocalización.");return}if(!window.isSecureContext){gpsError("El navegador indica que esta página no está en un contexto seguro. Abre el HTML desde HTTPS o localhost para habilitar GPS.");return}resetMeasure(false);measuring=true;$("startGps").disabled=true;$("finishGps").disabled=false;gpsError("Solicitando GPS y registrando punto A…");watchId=navigator.geolocation.watchPosition(pos=>{const c=pos.coords,p={lat:c.latitude,lon:c.longitude,alt:Number.isFinite(c.altitude)?c.altitude:null,acc:c.accuracy||0,time:pos.timestamp};if(!pointA){pointA=p;$("altA").textContent=p.alt===null?"No disponible":fmt(p.alt,1)+" m s. n. m.";gpsError("Punto A registrado. Camina hasta el punto B con el GPS activo.");}if(lastPoint){const seg=haversine(lastPoint,p);if(seg>=1.5 && seg<100){distanceM+=seg;points.push(p);lastPoint=p}else if(seg>=100){gpsError("Se detectó un salto GPS grande y se ignoró. Espera una señal más estable.");return}else{lastPoint=p}}else{lastPoint=p;points.push(p)}$("gpsDistance").textContent=fmt(distanceM,1)+" m";$("gpsPoints").textContent=String(points.length);$("distanciaGpsFinal").value=distanceM.toFixed(1);$("gpsStatus").textContent="Medición en curso. Precisión GPS actual: ±"+fmt(p.acc,0)+" m. Camina por el trayecto previsto.";},err=>{gpsError("No se pudo obtener la ubicación: "+({1:"permiso denegado",2:"posición no disponible",3:"tiempo de espera agotado"}[err.code]||err.message)+". Revisa permisos y GPS.");},{enableHighAccuracy:true,maximumAge:1000,timeout:20000})}
+function finishMeasure(){if(!measuring)return;measuring=false;if(watchId!==null)navigator.geolocation.clearWatch(watchId);watchId=null;$("startGps").disabled=false;$("finishGps").disabled=true;if(points.length<2){gpsError("Se registraron muy pocos puntos para estimar el trayecto. Intenta de nuevo o ingresa la distancia manualmente.");return}pointB=points[points.length-1];$("altB").textContent=pointB.alt===null?"No disponible":fmt(pointB.alt,1)+" m s. n. m.";if(pointA.alt!==null&&pointB.alt!==null){$("desnivelGpsFinal").value=(pointB.alt-pointA.alt).toFixed(1)}gpsError("Trayecto finalizado. Distancia aproximada registrada. Corrige la distancia para representar la longitud real de tubería y verifica el desnivel.");}
+function resetMeasure(clear=true){if(watchId!==null)navigator.geolocation.clearWatch(watchId);watchId=null;measuring=false;lastPoint=null;points=[];distanceM=0;pointA=null;pointB=null;$("startGps").disabled=false;$("finishGps").disabled=true;$("gpsDistance").textContent="— m";$("gpsPoints").textContent="0";$("altA").textContent="No disponible";$("altB").textContent="No disponible";if(clear){$("distanciaGpsFinal").value="";$("desnivelGpsFinal").value="";}gpsError("Listo para registrar el punto A.");}
+function useGpsValues(){const d=num("distanciaGpsFinal");if(d<=0){gpsError("Primero realiza un trayecto GPS o ingresa una distancia válida.");return}const desn=$("desnivelGpsFinal").value.trim();$("distanciaManual").value=d.toFixed(1);if(desn!=="")$("desnivelManual").value=desn;setModo("manual");gpsError("Valores copiados al modo manual. Puedes corregirlos antes de calcular.");}
+function getRoute(){if(modo==="gps"){return{length:num("distanciaGpsFinal"),rise:num("desnivelGpsFinal"),source:"Trayecto GPS (revisado)"};}return{length:num("distanciaManual"),rise:num("desnivelManual"),source:"Ingreso manual"}}
+function buscarAspersor(){
+ const fabricante=$("fabricanteAspersor").value.trim(),modelo=$("modeloAspersor").value.trim();
+ const consulta=[fabricante,modelo,"aspersor ficha técnica caudal presión PSI"].filter(Boolean).join(" ");
+ if(!fabricante&&!modelo){alert("Escribe el fabricante o el modelo del aspersor para buscar su ficha técnica.");return}
+ window.open("https://www.google.com/search?q="+encodeURIComponent(consulta),"_blank","noopener,noreferrer");
+}
+function calcularBombeo(){
+ const out=$("resultadoBombeo"),p=num("profundidadPozo"),pd=num("profundidadBombeo"),e=num("espejoAgua"),dp=num("diametroPozo"),h=hsp(),route=getRoute(),pipeD=num("diametroTuberia")/1000,sumK=num("coefAccesorios"),method=$("metodoCalculo").value;
+ if(method==="hidraulico"&&pd<=0){out.innerHTML='<div class="error">Para el método hidráulico, ingresa la profundidad de bombeo estimada desde la superficie. Idealmente debe ser el nivel dinámico durante el bombeo.</div>';return}
+ if(method==="rapido"&&p<=0){out.innerHTML='<div class="error">Para el método rápido, ingresa la profundidad total del pozo.</div>';return}
+ if(pipeD<=0||route.length<0||!Number.isFinite(route.rise)||sumK<0){out.innerHTML='<div class="error">Revisa el diámetro de tubería, la distancia, el desnivel y el coeficiente de accesorios.</div>';return}
+ let qLmin,deliveryHeight=0,application="";
+ if(tipo==="tanque"){const cap=num("capacidadTanque"),hrs=num("tiempoLlenado");if(cap<=0||hrs<=0){out.innerHTML='<div class="error">Para llenar el tanque, indica capacidad y tiempo deseado mayores que cero.</div>';return}qLmin=cap/(hrs*60);deliveryHeight=num("alturaTanque");application="Llenado de tanque"}
+ else{
+  const area=num("areaRiego"),demand=num("demandaRiego"),nTotal=num("aspersoresTotal"),nAsp=num("aspersoresSector"),qAsp=num("caudalAspersor"),pAsp=num("presionAspersor"),horasDia=num("horasRiegoDia");
+  if(area<=0||demand<=0){out.innerHTML='<div class="error">Para riego, indica área y demanda hídrica mayores que cero.</div>';return}
+  if(!Number.isInteger(nTotal)||nTotal<1||!Number.isInteger(nAsp)||nAsp<1||nAsp>nTotal||qAsp<=0||pAsp<=0||horasDia<=0){out.innerHTML='<div class="error">Para calcular el riego por sectores, introduce el total de aspersores, los aspersores activos por sector (sin superar el total), su caudal unitario y su presión de trabajo, todos mayores que cero.</div>';return}
+  const litersDay=area*10000*demand;
+  qLmin=nAsp*qAsp;
+  deliveryHeight=num("alturaRiego");
+  application="Riego por sectores"+($("cultivo").value.trim()?" · "+$("cultivo").value.trim():"");
+  window._solarixRiego={area,demand,nTotal,nAsp,nSectors:Math.ceil(nTotal/nAsp),qAsp,pAsp,horasDia,litersDay,sectorFlow:qLmin,pressureMca:pAsp*0.70307,runtimeHours:litersDay/(qLmin*60),maxDailyLiters:qLmin*60*horasDia};
+ }
+ if(route.length<=0){out.innerHTML='<div class="error">Ingresa o mide una distancia A → B mayor que cero.</div>';return}
+ const Q=qLmin/60000,A=Math.PI*pipeD*pipeD/4,vel=Q/A,nu=1.004e-6,Re=vel*pipeD/nu,rough=0.0000015;
+ // Darcy-Weisbach: laminar 64/Re; turbulent Swamee-Jain. Transitional flow is flagged below.
+ let f=0;
+ if(Re>0 && Re<2300) f=64/Re;
+ else if(Re>=2300) f=0.25/Math.pow(Math.log10((rough/(3.7*pipeD))+(5.74/Math.pow(Re,0.9))),2);
+ const velocityHead=(vel*vel)/(2*9.80665),hf=f*(route.length/pipeD)*velocityHead,hl=sumK*velocityHead,friction=hf+hl;
+ let staticLift,tdh,quickMca=null;
+ const riegoData=tipo==="riego"?window._solarixRiego:null;
+ const pressureHead=riegoData?riegoData.pressureMca:0;
+ if(method==="hidraulico") {staticLift=(tipo==="riego"?pd:p)+route.rise+deliveryHeight+pressureHead;tdh=Math.max(0,staticLift)+friction;}
+ else {quickMca=Math.max(0,p+route.rise+deliveryHeight+(route.length/10)+10+pressureHead);staticLift=p+route.rise+deliveryHeight+pressureHead;tdh=quickMca;}
+ const hydraulicKw=1000*9.80665*Q*tdh/1000,pumpKw=hydraulicKw/0.55,gpm=qLmin/3.785411784;
+ const vol=volumeWell(),methodName=method==="hidraulico"?"Hidráulico recomendado":"Rápido conservador";
+ summaryText=`SOLARIX | JUAN CASTILLO D. — DIMENSIONAMIENTO PRELIMINAR DE BOMBEO SOLAR\nProyecto: ${application}\nUbicación: ${$("ciudad").value||"No especificada"}, ${$("departamento").value}\nHSP referencia: ${fmt(h)}\nPozo: profundidad total ${p>0?fmt(p):"no ingresada"} m; profundidad del agua / bombeo desde superficie ${pd>0?fmt(pd):"no ingresada"} m; nivel de agua en reposo ${$("espejoAgua").value.trim()?fmt(e):"no ingresado"} m\n${vol?`Volumen geométrico estimado: ${fmt(vol.liters,0)} L (${fmt(vol.m3,3)} m³)\n`:"Volumen geométrico: no calculado (faltan datos opcionales)\n"}Ruta A→B: ${route.source}; distancia ${fmt(route.length,1)} m; desnivel B−A ${fmt(route.rise,1)} m\nCaudal requerido: ${fmt(qLmin,2)} L/min = ${fmt(gpm,2)} GPM estadounidenses = ${fmt(qLmin*60/1000,3)} m³/h\n${riegoData?`RIEGO POR SECTORES: ${riegoData.nTotal} aspersores instalados en ${riegoData.nSectors} sectores; ${riegoData.nAsp} aspersores activos por sector × ${fmt(riegoData.qAsp,2)} L/min = ${fmt(riegoData.sectorFlow,2)} L/min; presión de trabajo ${fmt(riegoData.pAsp,2)} PSI = ${fmt(riegoData.pressureMca,2)} MCA; volumen diario orientativo ${fmt(riegoData.litersDay,0)} L; tiempo requerido estimado ${fmt(riegoData.runtimeHours,2)} h/día; horas disponibles ${fmt(riegoData.horasDia,2)} h/día.\n`:""}Método de altura: ${methodName}\nAltura estática estimada: ${fmt(staticLift,2)} m; pérdidas calculadas en tubería y accesorios: ${fmt(friction,2)} m; velocidad ${fmt(vel,3)} m/s; Reynolds ${fmt(Re,0)}; factor Darcy ${fmt(f,5)}; ΣK=${fmt(sumK,2)}\n${method==="rapido"?`Cálculo rápido conservador (MCA): ${fmt(quickMca,2)} m; incluye distancia/10 y margen fijo de 10 m.\n`:""}Altura dinámica total preliminar / altura requerida: ${fmt(tdh,2)} MCA\nPotencia estimada de bomba: ${fmt(pumpKw,3)} kW (${fmt(pumpKw*1000,0)} W)\nTubería seleccionada: ${$("diametroTuberia").selectedOptions[0].textContent}; diámetro interior aproximado ${fmt(pipeD*1000,0)} mm; coeficiente total de pérdidas localizadas ΣK=${fmt(sumK,2)}\nNOTA: validar nivel dinámico al caudal de diseño, caudal sostenible del pozo, curva real Q-H, presión en destino si aplica, diámetro interior real y trazado de tubería, ΣK de accesorios, controlador y compatibilidad eléctrica/fotovoltaica. Referencia de fabricante para selección final: Pearl Water Systems (catálogos y curvas oficiales).`;
+ let idx=Math.floor(Math.random()*DATOS_CURIOSOS.length);if(DATOS_CURIOSOS.length>1&&idx===ultimoDato)idx=(idx+1)%DATOS_CURIOSOS.length;ultimoDato=idx;const datoCuriosoEl=$("datoCurioso");if(datoCuriosoEl)datoCuriosoEl.textContent=DATOS_CURIOSOS[idx];if(typeof solarixNextFact==="function")solarixNextFact();
+ const heightLabel=method==="rapido"?"MCA estimados (m)":"MCA requeridos · método hidráulico";
+ out.innerHTML=`<h3>Resultado: altura que debe vencer la bomba</h3><div class="success"><strong>Como estimación inicial, la bomba debe entregar aproximadamente ${fmt(qLmin,2)} L/min a ${fmt(tdh,2)} MCA.</strong><br>${method==="rapido"?"Este valor usa el método rápido conservador; puede sobredimensionar y no representa las pérdidas reales medidas.":"Este cálculo usa Darcy-Weisbach para la tubería recta y ΣK para accesorios. No es exacto si el nivel dinámico, el diámetro interior, la rugosidad, el ΣK o la presión de destino no son datos reales."}<br>Compara el caudal y los MCA simultáneamente con la curva oficial de la bomba Pearl elegida. <a href="https://pearlwatersystems.com/products/cat/53" target="_blank" rel="noopener">Consultar catálogo oficial Pearl y curvas</a>.</div><div class="metrics">
+ <div class="metric"><div class="k">Caudal requerido · litros por minuto</div><div class="v">${fmt(qLmin,2)} L/min</div></div>
+ <div class="metric"><div class="k">Caudal requerido · galones por minuto (EE. UU.)</div><div class="v">${fmt(gpm,2)} GPM</div></div>
+ <div class="metric"><div class="k">${heightLabel}</div><div class="v">${fmt(tdh,2)} m</div></div>
+ <div class="metric"><div class="k">Altura estática estimada</div><div class="v">${fmt(staticLift,2)} m</div></div>
+ <div class="metric"><div class="k">Pérdidas de tubería + accesorios</div><div class="v">${fmt(friction,2)} m</div></div>
+ <div class="metric"><div class="k">Velocidad del agua en la tubería</div><div class="v">${fmt(vel,3)} m/s</div></div>
+ <div class="metric"><div class="k">Potencia estimada de bomba</div><div class="v">${fmt(pumpKw*1000,0)} W</div></div>
+ <div class="metric"><div class="k">Aplicación</div><div class="v" style="font-size:16px">${application}</div></div></div>
+ <div class="note"><strong>Trayecto usado:</strong> ${route.source}; ${fmt(route.length,1)} m; desnivel B−A ${fmt(route.rise,1)} m. <strong>Conversión de caudal:</strong> 1 GPM estadounidense = 3,785411784 L/min.</div>
+ ${riegoData?`<div class="metrics"><div class="metric"><div class="k">Aspersores instalados</div><div class="v">${riegoData.nTotal}</div></div><div class="metric"><div class="k">Sectores estimados</div><div class="v">${riegoData.nSectors}</div></div><div class="metric"><div class="k">Aspersores activos por sector</div><div class="v">${riegoData.nAsp}</div></div><div class="metric"><div class="k">Presión requerida en cada aspersor</div><div class="v">${fmt(riegoData.pAsp,2)} PSI</div></div><div class="metric"><div class="k">Altura equivalente de presión</div><div class="v">${fmt(riegoData.pressureMca,2)} MCA</div></div><div class="metric"><div class="k">Volumen de riego diario estimado</div><div class="v">${fmt(riegoData.litersDay,0)} L/día</div></div><div class="metric"><div class="k">Tiempo de riego requerido estimado</div><div class="v">${fmt(riegoData.runtimeHours,2)} h/día</div></div><div class="metric"><div class="k">Horas disponibles al día</div><div class="v">${fmt(riegoData.horasDia,2)} h/día</div></div></div><div class="${riegoData.runtimeHours<=riegoData.horasDia?'success':'warning'}"><strong>${riegoData.runtimeHours<=riegoData.horasDia?'La capacidad diaria estimada alcanza el tiempo configurado.':'Advertencia: el tiempo requerido supera las horas disponibles.'}</strong><br>La comprobación supone que el caudal unitario indicado corresponde a la presión de trabajo del fabricante y que todos los aspersores del sector operan simultáneamente. No verifica por sí sola uniformidad, traslape, infiltración ni pérdidas distintas de las modeladas.</div>`:""}
+
+ `;
+ const criterios=$("guiaCriteriosContent");
+ if(criterios) criterios.innerHTML=method==="rapido"?'<div class="warning"><strong>Método rápido:</strong> estimación conservadora que incluye profundidad total, desnivel, altura de descarga, distancia horizontal/10 y un margen fijo de 10 m. No calcula individualmente las pérdidas reales.</div>':'<div class="warning"><strong>Método hidráulico:</strong> estima pérdidas por Darcy-Weisbach y accesorios ΣK. '+(sumK===0?'ΣK está en cero; esto no significa que no existan pérdidas localizadas.':'Verifica que ΣK represente todos los accesorios instalados.')+' Valida nivel dinámico, diámetro interior y curva Q-H oficial.</div>';
+ const detalle=$("guiaDetalleContent");
+ if(detalle) detalle.innerHTML='<pre style="white-space:pre-wrap;font:13px/1.5 inherit;background:#f7f9fb;padding:12px;border-radius:10px">'+escapeHtml(summaryText)+'</pre>';
+}
+function calcularPanelesBombeo(){
+ const hp=Number($("bombaHP").value),wp=Number($("potenciaPanel").value),factor=Number($("factorSolar").value),out=$("resultadoPaneles");
+ if(!Number.isFinite(hp)||hp<=0||!Number.isFinite(wp)||wp<=0){out.className="error";out.textContent="Ingresa una potencia de bomba en HP y una potencia de panel en Wp, ambas mayores que cero.";return}
+ const potenciaMotorW=hp*746,potenciaFV=potenciaMotorW*factor,cantidad=Math.ceil(potenciaFV/wp),kw=potenciaFV/1000,modelo=$("modeloINVT").value.trim();
+ out.className="success";
+ out.innerHTML=`<strong>Estimación orientativa: ${cantidad} paneles de ${fmt(wp,0)} Wp.</strong><br>Potencia nominal de la bomba: ${fmt(hp,2)} HP ≈ ${fmt(potenciaMotorW/1000,3)} kW (${fmt(potenciaMotorW,0)} W).<br>Potencia FV objetivo con factor ${fmt(factor,2)}: ${fmt(kw,3)} kWp (${fmt(potenciaFV,0)} Wp).<br>Potencia pico total instalada estimada: ${fmt(cantidad*wp/1000,3)} kWp (${fmt(cantidad*wp,0)} Wp).${modelo?`<br>Variador ingresado: ${escapeHtml(modelo)}. La compatibilidad de este modelo no está verificada automáticamente.`:""}<br><strong>Antes de aceptar la sugerencia:</strong> confirma tensión y corriente del motor, Voc/Vmp de paneles, tensión de arranque, rango MPPT, máximo Voc y potencia FV permitida en la ficha del variador INVT específico.`;
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+async function copiarResumen(){if(!summaryText){calcularBombeo();if(!summaryText)return}try{await navigator.clipboard.writeText(summaryText);alert("Resumen técnico copiado.")}catch(e){const t=document.createElement("textarea");t.value=summaryText;document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();alert("Resumen técnico copiado.")}}
+window.addEventListener("beforeunload",()=>{if(watchId!==null)navigator.geolocation.clearWatch(watchId)});
+</script>
+
+<script>
+const SOLARIX_HOME_FACTS = [
+"Una bomba no crea agua: transfiere energía al fluido para moverlo y superar elevación, presión y pérdidas.",
+"La altura dinámica total combina la elevación, las pérdidas en tuberías y accesorios y, cuando corresponde, la presión requerida en el punto de entrega.",
+"El diámetro interior de la tubería influye en las pérdidas por fricción; un diámetro mayor puede reducirlas, aunque debe evaluarse junto con el caudal y el costo.",
+"Las horas solares pico son una referencia energética equivalente; no significan que el sol mantenga la misma intensidad durante todas esas horas.",
+"Una bomba debe seleccionarse con su curva caudal-altura (Q-H), no únicamente por su potencia nominal en HP."
+];
+let solarixFactIndex = 0;
+function solarixSetFact(index){
+  solarixFactIndex = ((index % SOLARIX_HOME_FACTS.length) + SOLARIX_HOME_FACTS.length) % SOLARIX_HOME_FACTS.length;
+  const text = document.getElementById('factHomeText');
+  const counter = document.getElementById('factCounter');
+  if(text) text.textContent = SOLARIX_HOME_FACTS[solarixFactIndex];
+  if(counter) counter.textContent = String(solarixFactIndex+1).padStart(2,'0')+' / '+String(SOLARIX_HOME_FACTS.length).padStart(2,'0');
+}
+function solarixNextFact(){ solarixSetFact(solarixFactIndex+1); }
+function solarixOpenModule(kind){
+  if(typeof setTipo === 'function') setTipo(kind);
+  window.setTimeout(()=>{const app=document.getElementById('app'); if(app) app.scrollIntoView({behavior:'smooth',block:'start'});},50);
+}
+function solarixGoPanels(){
+  window.setTimeout(()=>{const panel=document.getElementById('bombaHP'); if(panel){panel.scrollIntoView({behavior:'smooth',block:'center'}); panel.focus?.({preventScroll:true});}else{document.getElementById('guiaSolarix')?.scrollIntoView({behavior:'smooth',block:'start'});}},50);
+}
+document.addEventListener('DOMContentLoaded',()=>solarixSetFact(0));
+</script>
+
+<footer class="site-footer"><div class="footer-brand"><img src="solarix-marca.png" alt=""> SOLARIX</div><span>Ingeniería solar · Bombeo hidráulico · Energía renovable</span><span>Autor. Juan Castillo D.</span><span>El sol también bombea progreso ☼</span></footer>
+</body>
+</html>
