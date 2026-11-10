@@ -220,7 +220,7 @@ small,.hint{color:#a6c2dc}
   </div>
   <aside class="side-stack">
     <section class="home-panel">
-      <div class="home-panel-head"><span><span style="color:#ffc400;font-size:21px">♧</span> &nbsp; Datos curiosos</span><span id="factCounter">01 / 05</span></div>
+      <div class="home-panel-head"><span><span style="color:#ffc400;font-size:21px">♧</span> &nbsp; Datos curiosos</span><span id="factCounter">01 / 120</span></div>
       <div class="home-panel-body">
         <div class="fact-home"><span class="fact-bulb">☼</span><div><strong>¿Sabías que…?</strong><p id="factHomeText">Una bomba no crea agua: transfiere energía al fluido para moverlo y superar elevación, presión y pérdidas.</p></div></div>
         <div class="fact-controls"><span>Conocimiento en cada cálculo</span><button type="button" onclick="solarixNextFact()">↻ Otro dato</button></div>
@@ -476,22 +476,26 @@ window.addEventListener("beforeunload",()=>{if(watchId!==null)navigator.geolocat
 </script>
 
 <script>
-const SOLARIX_HOME_FACTS = [
-"Una bomba no crea agua: transfiere energía al fluido para moverlo y superar elevación, presión y pérdidas.",
-"La altura dinámica total combina la elevación, las pérdidas en tuberías y accesorios y, cuando corresponde, la presión requerida en el punto de entrega.",
-"El diámetro interior de la tubería influye en las pérdidas por fricción; un diámetro mayor puede reducirlas, aunque debe evaluarse junto con el caudal y el costo.",
-"Las horas solares pico son una referencia energética equivalente; no significan que el sol mantenga la misma intensidad durante todas esas horas.",
-"Una bomba debe seleccionarse con su curva caudal-altura (Q-H), no únicamente por su potencia nominal en HP."
-];
-let solarixFactIndex = 0;
+// El panel de portada reutiliza la biblioteca completa para evitar mantener dos listas distintas.
+const SOLARIX_HOME_FACTS = DATOS_CURIOSOS;
+let solarixFactIndex = Math.floor(Math.random() * SOLARIX_HOME_FACTS.length);
 function solarixSetFact(index){
-  solarixFactIndex = ((index % SOLARIX_HOME_FACTS.length) + SOLARIX_HOME_FACTS.length) % SOLARIX_HOME_FACTS.length;
+  const total = SOLARIX_HOME_FACTS.length;
+  if (!total) return;
+  solarixFactIndex = ((index % total) + total) % total;
   const text = document.getElementById('factHomeText');
   const counter = document.getElementById('factCounter');
   if(text) text.textContent = SOLARIX_HOME_FACTS[solarixFactIndex];
-  if(counter) counter.textContent = String(solarixFactIndex+1).padStart(2,'0')+' / '+String(SOLARIX_HOME_FACTS.length).padStart(2,'0');
+  if(counter) counter.textContent = String(solarixFactIndex+1).padStart(2,'0')+' / '+String(total).padStart(3,'0');
 }
-function solarixNextFact(){ solarixSetFact(solarixFactIndex+1); }
+function solarixNextFact(){
+  if (SOLARIX_HOME_FACTS.length < 2) return;
+  let next = Math.floor(Math.random() * SOLARIX_HOME_FACTS.length);
+  if (next === solarixFactIndex) next = (next + 1) % SOLARIX_HOME_FACTS.length;
+  solarixSetFact(next);
+}
+// Selección aleatoria al abrir la portada.
+solarixSetFact(solarixFactIndex);
 function solarixOpenModule(kind){
   if(typeof setTipo === 'function') setTipo(kind);
   window.setTimeout(()=>{const app=document.getElementById('app'); if(app) app.scrollIntoView({behavior:'smooth',block:'start'});},50);
