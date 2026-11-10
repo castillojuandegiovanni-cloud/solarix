@@ -14,7 +14,52 @@
 
 <!-- Manifiesto para dispositivos Android y pantallas de inicio -->
 <link rel="manifest" href="./site.webmanifest">
-<title>Solarix | Juan Castillo D. — Bombeo solar</title>
+<title>Solarix | Calculadora de bombeo solar y paneles solares</title>
+<meta name="description" content="Calcula de forma preliminar sistemas de bombeo solar, llenado de tanques, riego por sectores y paneles fotovoltaicos con criterios técnicos claros.">
+<meta name="author" content="Juan Castillo D.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://castillojuandegiovanni-cloud.github.io/solarix/">
+<meta name="application-name" content="Solarix">
+<meta name="language" content="Spanish">
+<meta name="geo.region" content="CO">
+<meta name="theme-color" content="#071A35">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Solarix">
+<meta property="og:title" content="Solarix | Calculadora de bombeo solar y paneles solares">
+<meta property="og:description" content="Herramienta web para estimar sistemas de bombeo solar, llenado de tanques, riego por sectores y paneles fotovoltaicos con criterios técnicos comprensibles.">
+<meta property="og:url" content="https://castillojuandegiovanni-cloud.github.io/solarix/">
+<meta property="og:image" content="https://castillojuandegiovanni-cloud.github.io/solarix/solarix-bombeo-ilustracion.jpg">
+<meta property="og:image:alt" content="Sistema de bombeo solar con panel fotovoltaico, variador, bomba sumergible, tanque y riego agrícola">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solarix | Calculadora de bombeo solar y paneles solares">
+<meta name="twitter:description" content="Dimensionamiento preliminar de bombeo solar, llenado de tanques, riego y paneles fotovoltaicos.">
+<meta name="twitter:image" content="https://castillojuandegiovanni-cloud.github.io/solarix/solarix-bombeo-ilustracion.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Solarix",
+  "url": "https://castillojuandegiovanni-cloud.github.io/solarix/",
+  "description": "Herramienta web de dimensionamiento preliminar de sistemas solares para bombeo de agua, llenado de tanques, riego por sectores y estimación de paneles fotovoltaicos.",
+  "inLanguage": "es-CO",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Cualquier sistema operativo con navegador web",
+  "author": {
+    "@type": "Person",
+    "name": "Juan Castillo D."
+  },
+  "image": "https://castillojuandegiovanni-cloud.github.io/solarix/solarix-bombeo-ilustracion.jpg",
+  "featureList": [
+    "Estimación de bombeo solar",
+    "Cálculo de caudal y altura manométrica en metros columna de agua (MCA)",
+    "Estimación para llenado de tanques",
+    "Dimensionamiento preliminar de riego por sectores",
+    "Estimación de cantidad de paneles fotovoltaicos"
+  ]
+}
+</script>
 <style>
 :root{--navy:#071A35;--gold:#FFC400;--green:#299B62;--bg:#F2F5F7;--ink:#17212B;--line:#DDE3E8;--muted:#627180;--red:#B42318;--blue:#EAF4FA;--energy:#0878D1;--cyan:#22C5F5}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
@@ -505,6 +550,37 @@ function solarixGoPanels(){
 }
 document.addEventListener('DOMContentLoaded',()=>solarixSetFact(0));
 </script>
+
+
+<section class="card solarix-seo-context" id="acerca-de-solarix" aria-labelledby="solarix-seo-title">
+  <h2 id="solarix-seo-title">Solarix: ingeniería solar al alcance de más personas</h2>
+  <p><strong>Solarix</strong> es una herramienta web desarrollada por Juan Castillo D. para orientar el dimensionamiento preliminar de proyectos que utilizan energía solar para mover y aprovechar el agua. Su propósito es acercar criterios de ingeniería a personas que necesitan avanzar con un proyecto, aunque no tengan formación especializada.</p>
+  <div class="solarix-seo-grid">
+    <div>
+      <h3>Calculadora de bombeo solar</h3>
+      <p>Permite organizar datos del pozo, caudal, recorrido de tubería, desnivel y altura de descarga para estimar la altura que debe vencer una bomba. Los resultados pueden expresarse en metros columna de agua (MCA) y deben contrastarse con la curva caudal-altura del fabricante.</p>
+    </div>
+    <div>
+      <h3>Llenado de tanques y riego por sectores</h3>
+      <p>Incluye estimaciones de caudal para llenar un tanque en un tiempo determinado y parámetros para riego por sectores, como área, aspersores activos, caudal unitario y presión de trabajo. Los datos agronómicos e hidráulicos deben ajustarse a las condiciones reales del proyecto.</p>
+    </div>
+    <div>
+      <h3>Cálculo de paneles y sistemas fotovoltaicos</h3>
+      <p>Ofrece una estimación preliminar de la cantidad de paneles solares a partir de la potencia nominal de la bomba, la potencia de los módulos y el margen fotovoltaico seleccionado. La compatibilidad eléctrica del arreglo con el variador y el motor requiere una revisión independiente de sus fichas técnicas.</p>
+    </div>
+  </div>
+  <p class="solarix-seo-note">Solarix facilita una primera aproximación y ayuda a comprender los datos de diseño; no sustituye una visita técnica, pruebas de bombeo, información del fabricante ni la validación hidráulica, eléctrica y agronómica del sistema.</p>
+</section>
+<style>
+.solarix-seo-context{margin-top:18px}
+.solarix-seo-context>p{max-width:980px}
+.solarix-seo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:10px}
+.solarix-seo-grid>div{padding:14px;border:1px solid #e3eaf0;border-radius:12px;background:#f8fafc}
+.solarix-seo-grid h3{margin:0 0 7px;font-size:15px}
+.solarix-seo-grid p{margin:0;font-size:13px;line-height:1.6;color:#425466}
+.solarix-seo-note{margin:14px 0 0;padding:11px 13px;border-left:3px solid #0878D1;background:#eef6fb;border-radius:7px;font-size:13px;color:#31475a}
+@media(max-width:760px){.solarix-seo-grid{grid-template-columns:1fr}.solarix-seo-grid>div{padding:12px}}
+</style>
 
 <footer class="site-footer"><div class="footer-brand"><img src="solarix-marca.png" alt=""> SOLARIX</div><span>Ingeniería solar · Bombeo hidráulico · Energía renovable</span><span>Autor. Juan Castillo D.</span><span>El sol también bombea progreso ☼</span></footer>
 

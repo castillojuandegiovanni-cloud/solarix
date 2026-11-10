@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://castillojuandegiovanni-cloud.github.io/solarix/sitemap.xml

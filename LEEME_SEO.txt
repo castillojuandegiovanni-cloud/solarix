@@ -1,0 +1,25 @@
+SOLARIX — PAQUETE SEO PARA GITHUB PAGES
+
+PUBLICACIÓN
+1. Descomprime este ZIP.
+2. Sube el contenido de esta carpeta a la raíz del repositorio GitHub Pages existente que publica /solarix/.
+3. Asegúrate de que index.html, robots.txt y sitemap.xml queden en la raíz del repositorio, junto a los recursos de imagen e iconos.
+4. Conserva el nombre index.html: es el punto de entrada esperado por GitHub Pages.
+5. Espera a que termine el despliegue y abre https://castillojuandegiovanni-cloud.github.io/solarix/.
+
+SEO INCLUIDO
+- title y meta description en español.
+- canonical absoluta para la URL pública del proyecto.
+- Open Graph y Twitter Cards con imagen absoluta del sistema de bombeo.
+- Datos estructurados JSON-LD de tipo WebApplication.
+- Contenido visible y breve que explica los módulos y el alcance preliminar de Solarix.
+- robots.txt y sitemap.xml con una única URL pública canónica.
+
+SEARCH CONSOLE
+- Añade una propiedad de tipo Prefijo de URL: https://castillojuandegiovanni-cloud.github.io/solarix/
+- Verifica la propiedad con el método HTML file o HTML tag que Search Console te proporcione. No se incluye un token inventado.
+- Después de publicar, inspecciona la URL principal y solicita indexación.
+- Envía https://castillojuandegiovanni-cloud.github.io/solarix/sitemap.xml en el informe Sitemaps.
+
+NOTAS
+La configuración prepara el sitio para rastreo, pero no garantiza indexación ni posiciones. Google decide si indexa la página y cómo la presenta.
